@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    background-color:#2f3542;
+    color:#ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;align-self: start;
+
+}
+.animated-title{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+    text-align: center;
+    margin:10px;
+}
+.animated-title span{
+    position: relative;
+}
+
+.animated-title span::after{
+    content: '';
+    background-color: #2f3542;
+    position: absolute;
+    animation: cursor 1s 2.9 , typing 10s steps(11);
+}
+@keyframes cursor {
+    0% {
+        width: calc(100% + 8px);
+        height: 100%;
+        border-left: 2px solid #ffffff;
+        right: -8px;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        width: calc(100% + 8px);
+        height: 100%;
+        border-left: 2px solid #ffffff;
+        right: -8px;
+    }
+}
+
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+     0%{
+        width: calc(100% + 8px);
+    }
+}
+h1, p {
+    margin: 1em auto;
+    text-align: center;
+  }
+  label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+.wrapper {
+    width: 25rem;
+    background-color: rgba(36, 44, 41,0.25);
+    border-radius: 20px;  
+    margin: 30px auto; 
+    padding: 2em 2em;
+
+}
+.entradas{
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+}
+fieldset {
+    border: none;
+  }
+.entradas input{
+    width: 95%;
+    background-color: rgba(249, 255, 252, 1);
+    border-color: #383839;
+    border-radius:50em;
+    height: 30px;
+    margin: 15px auto;
+    padding: 5px 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.entradas input:last-of-type{
+
+}
+#ice{
+    width: 100%;
+    margin: 10px auto;
+}
+.opition{
+    width: 50px;
+}
+legend{
+    font-family: 'Courier New', Courier, monospace;
+}
+textarea, select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+  }
+ textarea {
+    background-color: #1c1c2b2f;
+    border: 1px solid #000000;
+    color: #ffffff;
+  }
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #0000008a;
+    border-color: white;
+    min-width: 300px;
+    color: white;
+  }

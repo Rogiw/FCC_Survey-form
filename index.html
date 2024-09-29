@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">This is a small survey form to get to know you better. We would like you to answer a question through the fields below:</p>
+        <div class="animated-title"><span>Who are you?</span></div>
+        <div class="wrapper">
+            <form id="survey-form" method="post" action='SurveyForm_project.php'>
+                <fieldset class="entradas">
+                    <label id="name-label" for="name">Enter Your Name:<input id="name" name="name" type="text" placeholder="name" required /></label>
+                    <label for="first-name">Enter Your First Name:<input id="first-name" name="first-name" type="text" placeholder="First name" required /></label>
+                    <label for="last-name">Enter Your Last Name:<input id="last-name" name="last-name" type="text" placeholder="Last name" required /></label>
+                    <label id="email-label" for="email">Enter Your Email:<input id="email" name="email" type="email" placeholder="email" required /></label>
+                    <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" placeholder="New password" /></label>
+                    <label id="number-label" for="age">How old are you? <input id="number" type="number" min="18" max="40" placeholder="Age"></label>
+                </fieldset>
+                <fieldset class="entradas">
+                    <label>What ice cream do you Like?
+                        <select id="dropdown" name="ice">
+                            <option value=""></option>
+                            <option value="1">Vanilla</option>
+                            <option value="2">Chocolate</option>
+                            <option value="3">Strawberry</option>
+                            <option value="4">Other</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Account type (required)</legend>
+                    <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked value="Personal" /> Personal</label>
+                    <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" value="Business"/> Business</label>
+                    <textarea id="Yourself" name="yourserl" rows="7" cols="30" placeholder="Who are you?..."></textarea>
+                    <legend>Are you sure?</Legend>
+                    <label><input type="checkbox" value="No"checked >No</label>
+                    <label><input type="checkbox" value="Yes">Yes</label>
+                <input id="submit" type="submit" value="Submit" />
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
